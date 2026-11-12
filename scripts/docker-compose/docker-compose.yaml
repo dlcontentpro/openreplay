@@ -584,6 +584,9 @@ services:
   nginx-openreplay:
     image: nginx:latest
     container_name: nginx
+    ports:
+      - "9888:80"
+      - "9443:443"
     networks:
       - openreplay-net
     volumes:
